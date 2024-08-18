@@ -2,12 +2,15 @@ from django.contrib import admin
 
 from orders.models import OrderProduct, Order
 from products.models import Tag, Product, Category
+from store.models import Inventory, Store
 
 # Register your models here.
 admin.site.register(Product)
 admin.site.register(OrderProduct)
 admin.site.register(Category)
 admin.site.register(Tag)
+admin.site.register(Store)
+admin.site.register(Inventory)
 
 class OrderProductInline(admin.TabularInline):
     model = OrderProduct
